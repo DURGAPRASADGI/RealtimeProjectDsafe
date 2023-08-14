@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@layer components {
+  body {
+    @apply bg-[#f1f5f9] p-0 m-0 sm:p-0  w-full h-screen sm:m-0 sm:box-border;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0px;
+}
+
+@keyframes animate-background {
+  0% {
+    background-image: url("https://i2-prod.gazettelive.co.uk/incoming/article6069360.ece/ALTERNATES/s615/GlendenenJPG.jpg");
+  }
+  25% {
+    background-image: url("https://www.spaldingtoday.co.uk/_media/img/CV1M1JT3HXWCVLJV8AD6.jpg");
+  }
+  50% {
+    background-image: url("https://leinstercricketumpiresscorers.files.wordpress.com/2021/01/pos..jpeg?w=602");
+  }
+
+  75% {
+    background-image: url("https://www.seqsem.com.au/wp-content/uploads/2020/11/Cricket.png");
+  }
+
+  100% {
+    background-image: url("https://www.petermeadephotography.com/img/s/v-10/p2495788221-4.jpg");
+  }
+}
+
+.con {
+  position: relative;
+  animation: animate-background 40s infinite;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.con .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
